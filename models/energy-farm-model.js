@@ -12,6 +12,7 @@ const energyFarmSchema = new Schema({
     condition: { type: String, require: true },
     deployment_required: { type: Boolean, require: false },
     service_required: { type: Boolean, require: false },
+    unit_capacity: { type: Number, require: true },
   },
   // optional settings object for this schema
   {
