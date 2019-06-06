@@ -25,3 +25,6 @@ dist
 
 # JIRA plugin
 atlassian-ide-plugin.xml
+
+#Environment Variables
+.env
