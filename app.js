@@ -1,12 +1,10 @@
 const express      = require('express');
 const path         = require('path');
-const favicon      = require('serve-favicon');
 const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 const session      = require('express-session');
-const passport     = require('passport');
 const flash        = require('connect-flash');
 
 require('dotenv').config();
@@ -34,10 +32,6 @@ app.use(session(
     saveUninitialized: true
   }
 ));
-// passport middlewares must come AFTER session middleware
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(flash());
 
 // ROUTES
 const index = require('./routes/index-router');

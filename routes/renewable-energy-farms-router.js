@@ -72,16 +72,4 @@ router.post('/renewable-energy-farms', (req, res, next) => {
   });
 });
 
-router.use('/solar-farm', (req, res, next) => {
-  res.locals.script = "form.js";
-  res.locals.errorMessage = req.flash('errorMessage');
-  res.locals.stylesheet = "/_css/form.css";
-});
-
-router.use('/wind-farm', (req, res, next) => {
-  res.locals.script = "form.js";
-  res.locals.errorMessage = req.flash('errorMessage');
-  res.locals.stylesheet = "/_css/form.css";
-});
-
 module.exports = router;
