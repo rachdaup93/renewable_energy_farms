@@ -55,6 +55,7 @@ router.post('/renewable-energy-farms', (req, res, next) => {
     condition: req.body.condition,
     deployment_required: req.body.deployment_required,
     service_required: req.body.service_required,
+    unit_capacity: req.body.unit_capacity,
   });
 
   farm.save((err)=>{
