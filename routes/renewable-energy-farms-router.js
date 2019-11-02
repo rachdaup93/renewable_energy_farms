@@ -15,7 +15,9 @@ router.get('/renewable-energy-farms', (req, res, next) => {
   let query = {};
   let params = req.params;
   
-  query.renewable_type = params.renewable_type;
+  if(params.renewable_type) {
+    query.renewable_type = params.renewable_type;
+  }
 
   EnergyFarmModel.find(
     query,
@@ -25,6 +27,7 @@ router.get('/renewable-energy-farms', (req, res, next) => {
         return;
       }
       console.log(farms);
+      console.log(query);
 
       res.status(200).json(farms);
     }
