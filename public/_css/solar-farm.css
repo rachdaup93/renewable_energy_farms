@@ -1,4 +1,168 @@
 body {
+  background-color: white;
+}
+
+body .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .header {
+  padding: 10px 0  10px 20px;
+  position: relative;
+  height: 815px;
+}
+
+body .header h1, body .header h2 {
+  font-family: 'Nova Mono', monospace;
+}
+
+body .header .farm-name {
+  margin-left: 105px;
+  margin-bottom: -265px;
+}
+
+body .header .farm-name h1, body .header .farm-name h2 {
+  font-weight: 900;
+}
+
+body .header .farm-name h1 {
+  font-size: 90px;
+}
+
+body .header .farm-name h2 {
+  font-size: 70px;
+}
+
+body .header .main-image {
+  float: right;
+  width: 70%;
+  height: 900px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .header .main-image img {
+  width: 100%;
+}
+
+body .header .location {
+  min-width: 250px;
+  display: inline-block;
+  position: absolute;
+  bottom: 255px;
+  left: 270px;
+  clear: right;
+  border-radius: 25px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+body .header .location .left, body .header .location .right {
+  padding: 15px;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+}
+
+body .header .location .left {
+  background-color: #007db6;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+body .header .location .right {
   background-color: black;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+body .section-1 {
+  width: 80%;
+  height: 600px;
+  clear: both;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  float: right;
+}
+
+body .section-1 .left {
+  width: 450px;
+}
+
+body .section-1 .left h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+body .section-1 .left p {
+  margin-left: 100px;
+}
+
+body .section-1 h3 {
+  font-size: 50px;
+  width: 600px;
+  /* IE 9 */
+  -webkit-transform: rotate(-90deg);
+  /* Safari prior 9.0 */
+  transform: rotate(-90deg);
+  /* Standard syntax */
+}
+
+body .section-1 h3 span {
+  font-weight: 900;
+}
+
+body .section-2 {
+  clear: both;
+}
+
+body .section-2 .left, body .section-2 .right {
+  padding: 0;
+}
+
+body .section-2 .right {
+  clear: right;
+  float: right;
+}
+
+body .section-2 .right .runner {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+  height: 400px;
+  width: 300px;
+}
+
+body .section-2 .right .runner img {
+  margin-right: -110px;
+  height: 100%;
+}
+
+body .section-2 .left {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (min-width: 992px) {
+  .section-2 .right.col-md-8 {
+    width: 69.1%;
+  }
 }
 /*# sourceMappingURL=solar-farm.css.map */

@@ -25,6 +25,8 @@ router.get('/renewable-energy-farms', (req, res, next) => {
         return;
       }
       console.log(farms);
+
+      res.status(200).json(farms);
     }
   );
 });
@@ -38,6 +40,8 @@ router.get('/renewable-energy-farms/:id',(req,res,next) => {
         return;
       }
       console.log(farm);
+
+      res.status(200).json(farm);
     }
   );
 });

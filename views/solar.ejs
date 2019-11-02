@@ -1,14 +1,76 @@
-<div>
+<%
+function getSample(array){
+    return array[Math.floor(Math.random() * array.length)]
+}
+const NAMES = ["New Life", "Green Pastures"];
+const LOCATIONS = [
+{ city: 'Austin', state: 'Texas'},
+{ city: 'jacksonville', state: 'florida'},
+{ city: 'portland', state: 'oregon' },
+{ city: 'phoenix', state: 'arizona' }
+]
+
+%>
+
+<div class='header'>
     <p>
         Welcome to
     </p>
-    <h1>
-        SOLAR ENERGY FARM NAME
-    </h1>
-    <div>
-        <img src="" />
+    <div class="farm-name">
+        <h1>
+           <%= getSample(NAMES) %>
+        </h1>
+        <h2>
+            Solar Farm
+        </h2>
     </div>
-    <h4>
-        Miami, FL
-    </h4>
+    <div class='main-image'>
+        <img src="/_images/solar/Florida_Desoto_Solar_Energy_Center_20160307 FPL_Solar 0153.jpg" />
+    </div>
+    <div class='location'>
+        <% let oneLocation = getSample(LOCATIONS) %>
+        <h4 class='left col-sm-6'>
+            <%= oneLocation.city %>
+        </h4>
+        <h4 class='right col-sm-6'>
+            <%= oneLocation.state %>
+        </h4>
+    </div>
+</div>
+<div class="section-1 flex">
+    <div class="left">
+        <h2>WHAT IS SOLAR POWER?</h2>
+            <p>
+                Many are familiar with so-called photovoltaic cells, 
+                or solar panels, found on things like spacecraft, rooftops, 
+                and handheld calculators. The cells are made of semiconductor 
+                materials like those found in computer chips. When sunlight hits 
+                the cells, it knocks electrons loose from their atoms. 
+                As the electrons flow through the cell, they generate electricity.
+            </p>
+    </div>
+    <h3>
+        <span>Solar energy</span> is the technology used to harness the sun's energy and make it useable. 
+    </h3>
+</div>
+<div class="section-2">
+    <div class="row">
+        <div class="right flex col-md-8">
+            <div class="runner flex">
+                <img src="/_images/solar/Solar-2-e1538155571447.jpg" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="left flex col-md-11">
+            <p>Solar energy doesn't work at night without a storage device such as a battery, and cloudy weather can make the technology unreliable during the day. Solar technologies are also very expensive and require a lot of land area to collect the sun's energy at rates useful to lots of people.</p>
+            <img src="/_images/solar/Solar-1-640x400.jpg" />
+        </div>
+    </div>
+</div>
+<div class="section-3">
+
+</div>
+<div class="section-4">
+
 </div>
