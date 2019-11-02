@@ -47,6 +47,7 @@ router.get('/renewable-energy-farms/:id',(req,res,next) => {
 });
 
 router.post('/renewable-energy-farms', (req, res, next) => {
+  
   const farm = new EnergyFarmModel({
     name: req.body.name,
     renewable_type: req.body.renewable_type,
@@ -66,15 +67,15 @@ router.post('/renewable-energy-farms', (req, res, next) => {
     if(farm.errors){
       return res.status(400).json({
         errorMessage: 'Database validation failed.',
+        requestInfo: JSON.stringify(req.body),
         validationErrors: farm.errors,
-        requestInfo: req
       });
     }
     if(err){
       return res.status(500).json({errorMessage: 'Could not submit renewable energy farm survey.'});
     }
 
-    res.status(200).json(farm);    
+    res.status(200).json(farm);
   });
 });
 
