@@ -63,7 +63,7 @@ router.post('/renewable-energy-farms', (req, res, next) => {
   });
 
   farm.save((err)=>{
-    if(bank.errors){
+    if(farm.errors){
       return res.status(400).json({
         errorMessage: 'Database validation failed.',
         validationErrors: farm.errors
