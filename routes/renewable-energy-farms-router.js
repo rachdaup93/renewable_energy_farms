@@ -66,14 +66,15 @@ router.post('/renewable-energy-farms', (req, res, next) => {
     if(farm.errors){
       return res.status(400).json({
         errorMessage: 'Database validation failed.',
-        validationErrors: farm.errors
+        validationErrors: farm.errors,
+        requestInfo: req
       });
     }
     if(err){
       return res.status(500).json({errorMessage: 'Could not submit renewable energy farm survey.'});
     }
 
-    res.status(200).json(farm);
+    res.status(200).json(farm);    
   });
 });
 
