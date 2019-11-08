@@ -50,7 +50,6 @@
 					<h2>How to Harness Solar Power</h2>
 				</header>
 				<div class="content">
-					</div>
 						<p>
 							In one technique, long troughs of U-shaped mirrors focus sunlight on a pipe of oil that runs through the middle. The hot oil then boils water for electricity generation.
 						</p>
@@ -67,6 +66,7 @@
 						<p>
 							Another technique uses moveable mirrors to focus the sun's rays on a collector tower, where a receiver sits. Molten salt flowing through the receiver is heated to run a generator.
 						</p>
+				</div>
 				<footer>
 					<a href="https://www.nationalgeographic.com/environment/global-warming/solar-power/" target="_blank" class="button alt">Learn More</a>
 				</footer>
@@ -109,15 +109,15 @@
 				</header>
 				<div class="content row">
 					<div class="6u 12u$(small)">
-						<p>Unit Capacity: <strong><%= condition.grossMW %>MW</strong></p>
-						<p>Weather Quality: <strong><%= condition.irradiance %> irradiance</strong></p>
-						<p>Total Units on Farm: <strong><%= condition.totalUnits %> solar panels</strong></p>
-						<p>Operating Units: <strong><%= condition.operatingUnits %> solar panels</strong></p>
+						<p>Unit Capacity (MW): <strong><%= condition.grossMW %></strong></p>
+						<p>Weather Quality (Irradiance): <strong><%= condition.irradiance %></strong></p>
+						<p>Total Units on Farm (Solar panels): <strong><%= condition.totalUnits %></strong></p>
+						<p>Operating Units (Solar panels): <strong><%= condition.operatingUnits %></strong></p>
 					</div>
 					<div class="6u$ 12u$(small)">
 						<p>Farm's overall condition: <strong><%= condition.condition %></strong></p>
-						<p>Deployment Required?: <strong><%= condition.deploymentRequired %></strong></p>
-						<p>Service Required?: <strong><%= condition.serviceRequired %></strong></p>
+						<p>Deployment Required: <strong><%= condition.deploymentRequired %></strong></p>
+						<p>Service Required: <strong><%= condition.serviceRequired %></strong></p>
 					</div>
 				</div>
 			</article>
