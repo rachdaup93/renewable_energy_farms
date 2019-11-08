@@ -13,8 +13,17 @@
   <body>
     <%-body-%>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Scripts -->
+  <script src="_js/jquery.min.js"></script>
+    <script src="_js/jquery.scrolly.min.js"></script>
+    <script src="_js/jquery.scrollex.min.js"></script>
+    <script src="_js/skel.min.js"></script>
+    <script src="_js/util.js"></script>
+    <script src="_js/main.js"></script>
+    <script src="_js/randomDataGenerator.js"></script>
   <% if(typeof script !== 'undefined'){ %>
     <script type="text/javascript" src="/_js/<%=script%>"></script>
+    
   <% } %>
   </body>
 </html>

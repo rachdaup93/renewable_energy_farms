@@ -2,6 +2,8 @@ const express = require('express');
 const router  = express.Router();
 const surveyRouter = require('./survey-router');
 const renewableEnergyFarmsRouter = require('./renewable-energy-farms-router');
+const solarData = require('../bin/site_locations/solar');
+const windData = require('../bin/site_locations/wind');
 
 router.get('/', (req, res, next) => {
   // check for feedback messages from the sign up process
@@ -10,12 +12,22 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/solar-farm', (req, res, next) => {
-  res.locals.stylesheet = "/_css/solar-farm.css";
-  res.render('solar');
+  const solarSite = solarData.locations[Math.floor(Math.random() * 10)];
+  const solarCondition = solarData.conditons[Math.floor(Math.random() * 10)];
+
+  res.locals.site = solarSite;
+  res.locals.condition = solarCondition;
+  res.locals.stylesheet = "/_css/main.css";
+  res.render('sites/solar/solar_site.ejs');
 });
 
 router.get('/wind-farm', (req, res, next) => {
-  res.locals.stylesheet = "/_css/wind-farm.css";
+  const windSite = windData.locations[Math.floor(Math.random() * 10)];
+  const windCondition = windData.conditons[Math.floor(Math.random() * 10)];
+
+  res.locals.site = windSite;
+  res.locals.condition = windCondition;
+  res.locals.stylesheet = "/_css/main.css";
   res.render('wind');
 });
 

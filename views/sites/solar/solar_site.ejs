@@ -1,0 +1,125 @@
+<!-- Header -->
+	<header id="header">
+		<div class="logo">
+			<img src="_images/NextEra_Energy_logo.svg" />
+		</div>
+	</header>
+
+<!-- Banner -->
+<!--
+	Note: To show a background image, set the "data-bg" attribute below
+	to the full filename of your image. This is used in each section to set
+	the background image.
+-->
+	<section id="banner">
+		<img src="" class="bg-img" data-bg="banner.jpg"/>
+		<div class="inner">
+			<header>
+				<h1><%= site.siteName %></h1>
+			</header>
+		</div>
+		<a href="#one" class="more">Learn More</a>
+	</section>
+
+<!-- One -->
+	<section id="one" class="wrapper post">
+		<img src="" class="bg-img" data-bg="banner2.jpg"/>
+		<div class="inner">
+			<article class="box">
+				<header>
+					<h2>What is a solar farm?</h2>
+					<p>(sometimes known as solar parks or solar fields)</p>
+				</header>
+				<div class="content">
+					<p>Solar farms are the large-scale application of solar photovoltaic (PV) panels to generate green, clean electricity at scale, usually to feed into the grid.</p>
+					<p>Many are familiar with so-called photovoltaic cells found on things like spacecraft, rooftops, and handheld calculators. The cells are made of semiconductor materials like those found in computer chips. When sunlight hits the cells, it knocks electrons loose from their atoms. As the electrons flow through the cell, they generate electricity.</p>
+					<p>Solar farms can cover anything between 1 acre and 100 acres, and are usually developed in rural areas.</p>
+					<p>Solar farms go through a rigorous planning procedure before they are approved. This takes into account the suitability of the specific site, any potential impact on the area and relevant renewable energy targets.</p>
+				</div>
+			</article>
+		</div>
+		<a href="#two" class="more">Learn More</a>
+	</section>
+
+<!-- Two -->
+	<section id="two" class="wrapper post">
+		<img src="" class="bg-img" data-bg="banner5.jpg"/>
+		<div class="inner">
+			<article class="box">
+				<header>
+					<h2>How to Harness Solar Power</h2>
+				</header>
+				<div class="content">
+					</div>
+						<p>
+							In one technique, long troughs of U-shaped mirrors focus sunlight on a pipe of oil that runs through the middle. The hot oil then boils water for electricity generation.
+						</p>
+						<div class="row">
+							<div class="4u 12u$(small)" style="margin-right: 7rem;">
+								<img src="_images/solar/u_shape_panels.gif" />
+								<div style="font-size: 12px;text-align:center;width: 266px;">U-Shaped Mirror</div>
+							</div>
+							<div class="4u 12u$(small)">
+								<img src="_images/solar/central_tower.jpg" style="height:204px;" />
+								<div style="font-size: 12px;text-align:center;width: 364px;">Collector Tower</div>
+							</div>
+						</div>
+						<p>
+							Another technique uses moveable mirrors to focus the sun's rays on a collector tower, where a receiver sits. Molten salt flowing through the receiver is heated to run a generator.
+						</p>
+				<footer>
+					<a href="https://www.nationalgeographic.com/environment/global-warming/solar-power/" target="_blank" class="button alt">Learn More</a>
+				</footer>
+			</article>
+		</div>
+		<a href="#three" class="more">Learn More</a>
+	</section>
+
+<!-- Three -->
+	<section id="three" class="wrapper post">
+		<img src="" class="bg-img" data-bg="banner4.jpg"/>
+		<div class="inner">
+			<article class="box">
+				<header>
+					<h2>Did you know?</h2>
+				</header>
+				<div class="content">
+					<p>
+					NextEra Energy Resources delivers clean energy across much of North America, helping provide sustainable solutions to meet evolving energy needs. We develop, construct and operate power projects to produce electricity.
+					</p>
+					<p>We are one of the largest generators of solar energy in the world.</p>
+					<p>We operates 33 universal-scale solar projects in the United States which generates more than 2,000 MW of energy.</p>
+				</div>
+				<footer>
+					<a href="https://www.nexteraenergyresources.com/locations-map.html" target="_blank" class="button alt">Visit Our Solar Sites</a>
+				</footer>
+			</article>
+		</div>
+		<a href="#four" class="more">Learn More</a>
+	</section>
+
+<!-- Four -->
+	<section id="four" class="wrapper post">
+		<img src="" class="bg-img" data-bg="banner3.jpg"/>
+		<div class="inner">
+			<article class="box">
+				<header>
+					<h2>Site Inspection</h2>
+					<p><%= %></p>
+				</header>
+				<div class="content row">
+					<div class="6u 12u$(small)">
+						<p>Unit Capacity: <strong><%= condition.grossMW %>MW</strong></p>
+						<p>Weather Quality: <strong><%= condition.irradiance %> irradiance</strong></p>
+						<p>Total Units on Farm: <strong><%= condition.totalUnits %> solar panels</strong></p>
+						<p>Operating Units: <strong><%= condition.operatingUnits %> solar panels</strong></p>
+					</div>
+					<div class="6u$ 12u$(small)">
+						<p>Farm's overall condition: <strong><%= condition.condition %></strong></p>
+						<p>Deployment Required?: <strong><%= condition.deploymentRequired %></strong></p>
+						<p>Service Required?: <strong><%= condition.serviceRequired %></strong></p>
+					</div>
+				</div>
+			</article>
+		</div>
+	</section>
