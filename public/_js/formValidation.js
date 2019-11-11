@@ -30,8 +30,9 @@ $(document).ready(function() {
       type : 'POST',
       data : data,
       dataType:'json',
-      success : function(data) {              
-          null;
+      success : function(data) {  
+        const baseUrl = window.location.href.split('/surveys')[0];            
+        window.location.replace(`${baseUrl}/thank-you`);
       },
       error : function(request,error) {
           alert('There was an error when trying to submit your survey. Please check your values again.')

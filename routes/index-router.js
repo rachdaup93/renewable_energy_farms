@@ -31,6 +31,11 @@ router.get('/wind-farm', (req, res, next) => {
   res.render('sites/wind/wind_site.ejs');
 });
 
+router.get('/thank-you', (req, res, next) => {
+  // check for feedback messages from the sign up process
+  res.locals.stylesheet = "/_css/thank_you.css";
+  res.render('thank_you');
+});
 
 router.use('/surveys', surveyRouter);
 router.use('/api', renewableEnergyFarmsRouter);
