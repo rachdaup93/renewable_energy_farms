@@ -5,7 +5,7 @@ const fs = require('fs');
 router.get('/:team', (req, res, next) => {
   // check for feedback messages from the sign up process
   const teamName = req.params.team;
-  const customScript = `'../public/_js/surveys/'${ teamName }.js`;
+  const customScript = `../public/_js/surveys/'${ teamName }.js`;
 
   res.locals.stylesheet = `/_css/surveys/${ teamName }.css`;
   res.locals.script = 'formValidation.js';
