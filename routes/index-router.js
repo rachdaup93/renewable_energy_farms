@@ -40,6 +40,7 @@ router.get('/thank-you', (req, res, next) => {
   const survey_id = req.query.survey_id;
   // check for feedback messages from the sign up process
   res.locals.stylesheet = "/_css/thank_you.css";
+  res.locals.hasHighlighting = true;
 
   if(survey_id) {
     EnergyFarmModel.findById(
