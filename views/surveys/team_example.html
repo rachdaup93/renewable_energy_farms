@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>[Team Name Here] Inspection Survey</title>
+</head>
+
+<body>
+	<div class="wrapper">
+			<div class="header">
+				<span class="title">Team Name Here</span>
+            </div>
+            <form id="renewable-survey-form">
+              <div class="fields" id="fields">
+                <input name="name" type="text" id="site-name" placeholder="Site Name" class="survey-inputs">
+                <input name="location" type="text" id="site-location" placeholder="Location" class="survey-inputs">
+                <select name="renewable_type" id="renewable-type" class="survey-inputs">
+                  <option value="" disabled selected>Renewable Type</option>
+                  <option label="Solar" value="Solar"></option>
+                  <option label="Wind" value="wind"></option>
+                </select>
+                <input name="total_units" type="text" id="total-units" placeholder="Total Units " class="survey-inputs">
+                <input name="operating_units" type="text" id="operating-units" placeholder="Operating Units" class="survey-inputs">
+                <input name="weather_quality" type="text" id="weather-quality" placeholder="Weather Quality" class="survey-inputs">
+                <select name="weather_quality_type" id="weather-type" class="survey-inputs">
+                  <option value="" disabled selected>Weather Quality Type</option>
+                  <option label="Irradiance" value="irradiance"></option>
+                  <option label="Knots" value="Knots"></option>
+                </select>
+                <select name="condition" id="condition" class="survey-inputs">
+                  <option value="" disabled selected>Site's Condition</option>
+                  <option label="Excellent" value="excellent"></option>
+                  <option label="Good" value="good"></option>
+                  <option label="Poor" value="poor"></option>
+                </select>
+                <select name="deployment_required" id="deployment-required" class="survey-inputs">
+                    <option value="" disabled selected>Deployment Required?</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+                <select name="service_required" id="service-required" class="survey-inputs">
+                    <option value="" disabled selected>Service Required?</option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+              </div>
+            <div class="footer">
+                <button type='submit' id="site-form-submit-button">Submit Form</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

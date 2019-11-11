@@ -14,7 +14,7 @@ const solarLocations = [
       "email": "contact@bluebellsolar.net"
     },
     {
-      "siteName": "Carousel Wind",
+      "siteName": "Carousel Solar",
       "state": "CO",
       "county": "Kit Carson County",
       "renewableType": "Solar",
@@ -176,5 +176,5 @@ const solarLocations = [
 
   module.exports = {
       locations: solarLocations,
-      conditons: solarConditions,
+      conditions: solarConditions,
   };

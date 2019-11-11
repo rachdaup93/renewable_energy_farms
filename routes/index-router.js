@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 
 router.get('/solar-farm', (req, res, next) => {
   const solarSite = solarData.locations[Math.floor(Math.random() * 10)];
-  const solarCondition = solarData.conditons[Math.floor(Math.random() * 10)];
+  const solarCondition = solarData.conditions[Math.floor(Math.random() * 10)];
 
   res.locals.site = solarSite;
   res.locals.condition = solarCondition;
@@ -23,12 +23,12 @@ router.get('/solar-farm', (req, res, next) => {
 
 router.get('/wind-farm', (req, res, next) => {
   const windSite = windData.locations[Math.floor(Math.random() * 10)];
-  const windCondition = windData.conditons[Math.floor(Math.random() * 10)];
+  const windCondition = windData.conditions[Math.floor(Math.random() * 10)];
 
   res.locals.site = windSite;
   res.locals.condition = windCondition;
   res.locals.stylesheet = "/_css/main.css";
-  res.render('wind');
+  res.render('sites/wind/wind_site.ejs');
 });
 
 

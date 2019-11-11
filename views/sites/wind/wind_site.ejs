@@ -1,0 +1,134 @@
+<!-- Header -->
+<header id="header">
+    <div class="logo">
+        <img src="_images/NextEra_Energy_logo.svg" />
+    </div>
+</header>
+
+<!-- Banner -->
+<!--
+Note: To show a background image, set the "data-bg" attribute below
+to the full filename of your image. This is used in each section to set
+the background image.
+-->
+<section id="banner">
+    <img src="" class="bg-img" data-bg="banner.jpg"/>
+    <div class="inner">
+        <header>
+            <h1><%= site.siteName %></h1>
+            <h2><%= site.county %>, <%= site.state %></h2>
+        </header>
+    </div>
+    <a href="#one" class="more">Learn More</a>
+</section>
+
+<!-- One -->
+<section id="one" class="wrapper post">
+    <img src="" class="bg-img" data-bg="banner2.jpg"/>
+    <div class="inner">
+        <article class="box">
+            <header>
+                <h2>What is a wind farm?</h2>
+            </header>
+            <div class="content">
+                <p>
+                    Wind farms are areas where many large wind turbines have been grouped together. They “harvest” the power of the wind. These large turbines look a bit like super-tall windmills.
+                </p>
+                <p>
+                    A large wind farm can have hundreds of wind turbines spread out over hundreds of miles. The land between the turbines may be used for other purposes, such as regular farming. Some wind farms are also located near bodies of water. There, they take advantage of winds that blow across lakes or oceans.
+                </p>
+                <p>
+                    The terms "wind energy" and "wind power" both describe the process by which the wind is used to generate mechanical power or electricity. This mechanical power can be used for specific tasks (such as grinding grain or pumping water) or a generator can convert this mechanical power into electricity.
+                </p>
+            </div>
+        </article>
+    </div>
+    <a href="#two" class="more">Learn More</a>
+</section>
+
+<!-- Two -->
+<section id="two" class="wrapper post">
+    <img src="" class="bg-img" data-bg="banner5.jpg"/>
+    <div class="inner">
+        <article class="box">
+            <header>
+                <h2>Types of Wind Farms</h2>
+            </header>
+            <div class="content">
+                    <div class="image left">
+                        <img src="_images/wind/offshore_onshore.jpg" style="height:200px;" />
+                        <div style="font-size: 12px;text-align:center;width: 266px;">Wind Turbines Type Based on Depth</div>
+                    </div>
+                    <p>
+                        Onshore wind farms are groupings of wind turbines clustered into a windy area on land.
+                        Each turbine sits atop a large steel tube (called a "tower") that gets it exposure to wind blowing at higher speeds. A series of blades spin the axis of the turbine when the wind blows over them.
+                    </p>                        
+                    <p>
+                        Offshore wind farms are collections of wind turbines located in water. They are often built in the ocean but also on lakes and fjords when wind speeds are strong enough. Offshore wind farms generally experience stronger wind speeds due to their location. They are capable of harnessing a colossal amount of power.
+                    </p>
+                    <div class="row">
+                 
+                    </div>
+            </div>
+            <footer>
+                <a href="https://www.energy.gov/eere/wind/how-do-wind-turbines-work" target="_blank" class="button alt">Learn More</a>
+            </footer>
+        </article>
+    </div>
+    <a href="#three" class="more">Learn More</a>
+</section>
+
+<!-- Three -->
+<section id="three" class="wrapper post">
+    <img src="" class="bg-img" data-bg="banner4.jpg"/>
+    <div class="inner">
+        <article class="box">
+            <header>
+                <h2>Did you know?</h2>
+            </header>
+            <div class="content">
+                <p>
+                    NextEra Energy Resources has 119 wind farms in operation, wind energy is affordable. This energy resource is good for our environment and our economy and provides millions in tax dollars and landowner payments. It also creates jobs and boosts local economies.
+                </p>
+            </div>
+            <footer>
+                <a href="http://www.nexteraenergyresources.com/what-we-do/wind.html" target="_blank" class="button alt">Learn More</a>
+            </footer>
+        </article>
+    </div>
+    <a href="#four" class="more">Learn More</a>
+</section>
+
+<!-- Four -->
+<section id="four" class="wrapper post">
+    <img src="" class="bg-img" data-bg="banner3.jpg"/>
+    <div class="inner">
+        <article class="box">
+            <header>
+                <h2>Site Inspection</h2>
+                <p><%= %></p>
+            </header>
+            <div class="content row">
+                <div class="6u 12u$(small)">
+                    <p>Unit Capacity (MW): <strong><%= condition.grossMW %></strong></p>
+                    <p>Weather Quality (Wind Velocity): <strong><%= condition.windVelocity %></strong></p>
+                    <p>Total Units on Farm (Wind Turbines): <strong><%= condition.totalUnits %></strong></p>
+                    <p>Operating Units (Wind Turbines): <strong><%= condition.operatingUnits %></strong></p>
+                </div>
+                <div class="6u$ 12u$(small)">
+                    <p>Farm's overall condition: <strong><%= condition.condition %></strong></p>
+                    <p>Deployment Required: <strong><%= condition.deploymentRequired %></strong></p>
+                    <p>Service Required: <strong><%= condition.serviceRequired %></strong></p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+<!-- Scripts -->
+<script src="_js/jquery.min.js"></script>
+<script src="_js/jquery.scrolly.min.js"></script>
+<script src="_js/jquery.scrollex.min.js"></script>
+<script src="_js/skel.min.js"></script>
+<script src="_js/util.js"></script>
+<script src="_js/main.js"></script>
+<script src="_js/randomDataGenerator.js"></script>

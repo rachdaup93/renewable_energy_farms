@@ -1,0 +1,10 @@
+.error {
+    margin-left: 15px;
+    color: red;
+}
+
+.btn-disabled {
+    background-color: #DDDDDD;
+    border: 1px solid #BFBFBF;
+    color: #BFBFBF;
+}
