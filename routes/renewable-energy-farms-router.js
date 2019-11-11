@@ -13,7 +13,7 @@ const myUploader =  multer({
 
 router.get('/renewable-energy-farms', (req, res, next) => {
   let query = {};
-  let params = req.params;
+  let params = req.query;
   
   if(params.renewable_type) {
     query.renewable_type = params.renewable_type;

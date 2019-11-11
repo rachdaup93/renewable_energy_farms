@@ -1,11 +1,14 @@
 const express = require('express');
 const router  = express.Router();
 const surveyRouter = require('./survey-router');
+const hljs = require('highlight.js/lib/highlight');
+const json = require('highlight.js/lib/languages/json');
 const renewableEnergyFarmsRouter = require('./renewable-energy-farms-router');
 const EnergyFarmModel   = require('../models/energy-farm-model.js');
 const solarData = require('../bin/site_locations/solar');
 const windData = require('../bin/site_locations/wind');
-const prettyHtml = require('json-pretty-html').default;
+
+hljs.registerLanguage('json', json);
 
 router.get('/', (req, res, next) => {
   // check for feedback messages from the sign up process
@@ -34,30 +37,27 @@ router.get('/wind-farm', (req, res, next) => {
 });
 
 router.get('/thank-you', (req, res, next) => {
+  const survey_id = req.query.survey_id;
   // check for feedback messages from the sign up process
   res.locals.stylesheet = "/_css/thank_you.css";
 
-  let params = req.params;
-  
-  if(params.survey_id) {
-    survey_id = params.survey_id;
-  }
-  
   if(survey_id) {
     EnergyFarmModel.findById(
       survey_id,
       (err, farm)=>{
         if(err){
+          console.log(err);
           next(err);
           return;
         }
-        
-        res.locals.dataOutput = prettyHtml(farm);
+        const highlightedJson = hljs.highlight('json', JSON.stringify(farm)).value;
+        res.locals.dataOutput = highlightedJson
+          .replace('{', '{<br>').replace('}', '<br>}').replace(/,/g, ',<br/>');
+        res.render('sites/thank_you');
       }
     );
   }
 
-  res.render('sites/thank_you');
 });
 
 router.use('/surveys', surveyRouter);

@@ -32,7 +32,7 @@ $(document).ready(function() {
       dataType:'json',
       success : function(data) {  
         const baseUrl = window.location.href.split('/surveys')[0];            
-        window.location.replace(`${baseUrl}/thank-you?survey_id=${data.id}`);
+        window.location.replace(`${baseUrl}/thank-you?survey_id=${data._id}`);
       },
       error : function(request,error) {
           alert('There was an error when trying to submit your survey. Please check your values again.')
