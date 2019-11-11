@@ -34,7 +34,7 @@ router.get('/wind-farm', (req, res, next) => {
 router.get('/thank-you', (req, res, next) => {
   // check for feedback messages from the sign up process
   res.locals.stylesheet = "/_css/thank_you.css";
-  res.render('thank_you');
+  res.render('sites/thank_you');
 });
 
 router.use('/surveys', surveyRouter);

@@ -1,6 +1,6 @@
 
 (function($){
-  const siteName = getUrlVars()["site-name"];
+  const siteName = getUrlVars();
   const banner1 = Math.ceil(Math.random() * 4);
   const banner2 = Math.ceil(Math.random() * 3);
   const banner3 = Math.ceil(Math.random() * 3);
